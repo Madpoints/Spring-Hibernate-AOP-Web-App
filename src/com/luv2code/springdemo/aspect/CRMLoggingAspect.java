@@ -39,5 +39,13 @@ public class CRMLoggingAspect {
 		
 		// display the method arguments
 		
+		// get arguments
+		Object[] args = theJoinPoint.getArgs();
+		
+		// display args
+		for (Object tempArg : args) {
+			myLogger.info("***argument: " + tempArg);
+		}
+		
 	}
 }
